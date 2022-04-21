@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Stock Control System</title>
+    <link rel="stylesheet" th:href="@{css/login.css}">
+
+</head>
+
+<body>
+   <div class="container text-center">
+   
+   
+   <div>
+	<h1>Stock Control System</h1>
+	</div>
+	
+	
+	<form th:action="@{/authenticate}" th:object="${user}" method="GET" style="max-width: 600px; margin: 0 auto;">
+		<div class="m-3">
+		
+		<div class="form-group row">
+			<label class="col-4 col-form-label"><strong>User name: </strong></label>
+				<div class="col-8">
+				<input type="text" th:field="*{userName}" class="form-control mb-4 col-4" required />
+				</div>
+			</div>
+			
+		<div class="form-group row">
+			<label class="col-4 col-form-label"><strong>Password: </strong> </label>
+				<div class="col-8">
+				<input type="password" th:field="*{password}" class="form-control mb-4 col-4" />
+				</div>
+			</div>
+			 <div class="login_button">
+				<button type="submit" class="btn btn-info col-2">Login</button>
+			</div>
+			<div>
+				<button type="submit" class="btn btn-info col-2">Register</button>
+			</div>
+		</div>
+		</form>
+	</div>
+</body>
+</html>
